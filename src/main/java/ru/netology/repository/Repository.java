@@ -23,7 +23,7 @@ public class Repository {
             tmp[i] = ticketsStorage[i];
         }
         tmp[tmp.length - 1] = inputTicket;
-        ticketsStorage = tmp;
+        setTicketStorage(tmp);
     }
 
     public Ticket[] findAll(){
@@ -39,6 +39,6 @@ public class Repository {
                 tempIndex++;
             }
         }
-        ticketsStorage = tmp;
+        setTicketStorage(tmp);
     }
 }
