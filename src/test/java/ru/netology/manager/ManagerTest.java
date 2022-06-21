@@ -8,13 +8,13 @@ import ru.netology.data.Ticket;
 import ru.netology.repository.Repository;
 
 public class ManagerTest {
-    Ticket ticket1 = new Ticket(1,10_000, "NSK", "DME", 270);
-    Ticket ticket2 = new Ticket(2,10_000, "DME", "NSK", 270);
-    Ticket ticket3 = new Ticket(3,9_500, "DME", "VKO", 60);
-    Ticket ticket4 = new Ticket(4,9_500, "VKO", "DME", 60);
-    Ticket ticket5 = new Ticket(5,9_000, "SVO", "LED", 75);
-    Ticket ticket6 = new Ticket(6,9_001, "NSK", "DME", 270);
-    Ticket ticket7 = new Ticket(7,9_000, "NSK", "DME", 270);
+    Ticket ticket1 = new Ticket(10_000, "NSK", "DME", 270);
+    Ticket ticket2 = new Ticket(10_000, "DME", "NSK", 270);
+    Ticket ticket3 = new Ticket(9_500, "DME", "VKO", 60);
+    Ticket ticket4 = new Ticket(9_500, "VKO", "DME", 60);
+    Ticket ticket5 = new Ticket(9_000, "SVO", "LED", 75);
+    Ticket ticket6 = new Ticket(9_001, "NSK", "DME", 270);
+    Ticket ticket7 = new Ticket(9_000, "NSK", "DME", 270);
     Repository repository = new Repository();
     Manager mng = new Manager(repository);
 

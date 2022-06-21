@@ -4,10 +4,10 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 public class TicketTest {
-    Ticket ticket1 = new Ticket(1,10_000, "NSK", "DME", 270);
-    Ticket ticket2 = new Ticket(2,10_000, "DME", "NSK", 270);
-    Ticket ticket3 = new Ticket(3,9_500, "DME", "VKO", 60);
-    Ticket ticket4 = new Ticket(4,9_500, "VKO", "DME", 60);
+    Ticket ticket1 = new Ticket(10_000, "NSK", "DME", 270);
+    Ticket ticket2 = new Ticket(10_000, "DME", "NSK", 270);
+    Ticket ticket3 = new Ticket(9_500, "DME", "VKO", 60);
+    Ticket ticket4 = new Ticket(9_500, "VKO", "DME", 60);
 
     @Test
     void shouldReturnTravelTime() {

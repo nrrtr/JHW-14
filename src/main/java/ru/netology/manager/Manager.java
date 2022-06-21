@@ -6,12 +6,19 @@ import ru.netology.repository.Repository;
 import java.util.Arrays;
 
 public class Manager {
-    Repository repo = new Repository();
+    private Repository repo = new Repository();
 
     public Manager(Repository repository) {
         this.repo = repository;
     }
 
+    public Repository getRepo() {
+        return repo;
+    }
+
+    public void setRepo(Repository repo) {
+        this.repo = repo;
+    }
 
     public void save(Ticket ticket) {
         repo.add(ticket);

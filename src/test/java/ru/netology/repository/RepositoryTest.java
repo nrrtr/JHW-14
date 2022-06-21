@@ -7,16 +7,16 @@ import ru.netology.data.Ticket;
 
 public class RepositoryTest {
     Repository repo = new Repository();
-    Ticket ticket1 = new Ticket(1,10_000, "NSK", "DME", 270);
-    Ticket ticket2 = new Ticket(2,10_000, "DME", "NSK", 270);
-    Ticket ticket3 = new Ticket(3,9_500, "DME", "VKO", 60);
-    Ticket ticket4 = new Ticket(4,9_500, "VKO", "DME", 60);
+    Ticket ticket1 = new Ticket(10_000, "NSK", "DME", 270);
+    Ticket ticket2 = new Ticket(10_000, "DME", "NSK", 270);
+    Ticket ticket3 = new Ticket(9_500, "DME", "VKO", 60);
+    Ticket ticket4 = new Ticket(9_500, "VKO", "DME", 60);
 
 
     @Test
     void shouldRemoveByIDFromRepoWithOnlyOneTicket() {
         repo.add(ticket1);
-        repo.removeById(1);
+        repo.removeById(ticket1.getId());
         Ticket[] er = {};
         Ticket[] ar = repo.findAll();
         assertArrayEquals(er, ar);
@@ -28,7 +28,7 @@ public class RepositoryTest {
         repo.add(ticket2);
         repo.add(ticket3);
         repo.add(ticket4);
-        repo.removeById(3);
+        repo.removeById(ticket3.getId());
         Ticket[] er = {ticket1, ticket2, ticket4};
         Ticket[] ar = repo.findAll();
         assertArrayEquals(er, ar);
